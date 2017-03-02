@@ -45,12 +45,6 @@ docker-compose stop {container-name}
 
 #####1、Use phpstrom open "YafDock/workspace/application"
 
-![image](https://github.com/VikinDev/PhalDock/blob/master/resource/Open.png)
-
 #####2、Editor test.php
 
-![image](https://github.com/VikinDev/PhalDock/blob/master/resource/Editor.png)
-
-#####3、Refresh the localhost
-
-![image](https://github.com/VikinDev/PhalDock/blob/master/resource/Localhost.png)
+#####3、Refresh the localhost/test.php
