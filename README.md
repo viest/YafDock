@@ -47,7 +47,7 @@ docker-compose stop {container-name}
 
 #####2、Editor test.php
 
-#####3、Refresh the localhost/test.php
+#####3、Refresh the localhost
 
 
 ### Docker file reference
