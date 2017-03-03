@@ -40,5 +40,5 @@ RUN useradd -m -s /bin/bash docker
 
 WORKDIR /var/www
 
-ADD application/* /var/www
+ADD application/* /var/www/
 RUN chown -R docker:docker /var/www
