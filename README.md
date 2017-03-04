@@ -2,11 +2,20 @@
 [![Yaf master](https://img.shields.io/badge/Yaf-master-brightgreen.svg)](https://github.com/laruence/yaf)
 ###Install
 
-Clone this repository on your project root directory:
+1. Clone this repository on your project root directory:
 
 ```bash
 git clone git@github.com:VikinDev/YafDock.git
 ```
+
+2. Enter `workspace/application/` directory run:
+
+```bash
+composer install
+```
+
+3. Use `Sequel Pro` link mysql, create `user` table.
+
 
 ###Usage
 
