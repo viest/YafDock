@@ -1,0 +1,21 @@
+{
+    "name": "VikinDev/application",
+    "authors": [
+        {
+            "name": "VikinDev",
+            "email": "vikindev@outlook.com"
+        }
+    ],
+    "require": {
+        "illuminate/database": "5.4.13",
+        "illuminate/events": "5.4.13",
+        "symfony/debug": "3.2.4",
+        "symfony/var-dumper": "3.2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\Models\\": "application/models",
+            "App\\Services\\": "application/services"
+        }
+    }
+}

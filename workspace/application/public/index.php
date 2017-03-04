@@ -6,6 +6,8 @@
  * Time: 下午4:02
  */
 
-define("APP_PATH",  realpath(dirname(__FILE__) . '/../')); /* 指向public的上一级 */
-$app  = new Yaf_Application(APP_PATH . "/config/application.ini");
-$app->run();
+define("APP_PATH",  realpath(dirname(__FILE__) . '/../'));
+
+$app  = new \Yaf\Application(APP_PATH . "/config/application.ini");
+
+$app->bootstrap()->run();

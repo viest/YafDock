@@ -1,20 +1,28 @@
 <?php
-
 /**
  * Created by PhpStorm.
  * User: vikin
  * Date: 2017/3/3
  * Time: 下午4:10
  */
-class IndexController extends Yaf_Controller_Abstract
+
+use App\Models\User;
+
+class IndexController extends \Yaf\Controller_Abstract
 {
+    /**
+     * @return mixed
+     */
     public function indexAction()
     {
-        $this->getView()->assign("content", "Hello World");
-    }
+        // ORM test
+        // $user = User::find(1);
+        // dd($user);
 
-    public function testAction ()
-    {
-        $this->getView()->assign("content", "Hello test");
+        $demoService = new App\Services\Index\DemoService();
+
+        $content = $demoService->getContent();
+
+        return $this->getView()->assign("content", $content);
     }
 }

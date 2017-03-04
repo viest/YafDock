@@ -54,7 +54,7 @@ RUN mkdir -p /usr/local/yaf/ && \
     phpize && ./configure && make && make install && \
     rm -rf /usr/local/yaf
 
-RUN echo "extension=yaf.so" > /etc/php/7.0/fpm/conf.d/phalcon.ini
+ADD  ./yaf.ini /etc/php/7.0/fpm/conf.d/yaf.ini
 
 RUN useradd -m -s /bin/bash docker
 
