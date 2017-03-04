@@ -1,2 +1,4 @@
 .idea
 logs
+workspace/application/vendor/
+php-fpm/log/

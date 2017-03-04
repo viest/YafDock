@@ -52,3 +52,49 @@ services:
       - ./redis/conf:/etc/reids
     ports:
       - "6379:6379"
+
+#---------------------------#
+###### mysql  container #####
+#---------------------------#
+
+  mysql:
+    build:
+      context: ./mysql
+      args:
+          - MYSQL_DATABASE=homestead
+          - MYSQL_USER=homestead
+          - MYSQL_PASSWORD=secret
+          - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - mysql:/var/lib/mysql
+      - ./logs/mysql:/var/log/mysql
+    ports:
+      - "3306:3306"
+
+#--------------------------------#
+###### phpMyAdmin  container #####
+#--------------------------------#
+
+  phpmyadmin:
+    build: ./phpmyadmin
+    environment:
+        PMA_ARBITRARY: 1
+        MYSQL_USER: homestead
+        MYSQL_PASSWORD: secret
+        MYSQL_ROOT_PASSWORD: root
+    ports:
+        - "8080:80"
+    links:
+        - "mysql:db"
+
+#--------------------------------#
+######     Volumes Setup     #####
+#--------------------------------#
+
+volumes:
+    mysql:
+        driver: "local"
+    phpmyadmin:
+        driver: "local"
+    sessions:
+        driver: "local"

@@ -42,7 +42,7 @@ RUN sed -i 's/MYSQL_DATABASE/'$MYSQL_DATABASE'/g' /etc/mysql/startup && \
 ADD my.cnf /etc/mysql/conf.d/my.cnf
 
 # 启动mysql
-CMD ["mysqld", "--init-file=/etc/mysql/startup"]
+CMD ["mysqld"]
 
 # 设置监听端口
 EXPOSE 3306
